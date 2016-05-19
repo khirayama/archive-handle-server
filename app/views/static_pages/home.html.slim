@@ -1,6 +1,11 @@
 h1 Sample App
-p
-  | This is the home page for the
-  a href="http://www.railstutorial.org/"
-    | Ruby on Rails Tutorial
-  | sample application.
+= link_to 'Logo', '#'
+ul
+  li
+    = link_to 'Home', '#'
+  li
+    = link_to 'Help', static_pages_help_path
+  li
+    = link_to 'About', static_pages_about_path
+  li
+    = link_to 'Sign up', '#'
