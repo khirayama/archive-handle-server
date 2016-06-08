@@ -1,3 +1,7 @@
 - if @user.errors.any?
   | the term contains 
   = pluralize(@user.errors.count, "error")
+  ul
+  - @user.errors.each do |name, message|
+    li
+      = "#{ name }: #{ message }"
