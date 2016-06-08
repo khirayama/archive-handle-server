@@ -1,0 +1,3 @@
+- if @user.errors.any?
+  | the term contains 
+  = pluralize(@user.errors.count, "error")

@@ -1,6 +1,8 @@
 - provide(:title, 'Sign up')
 h1 Signup
 = form_for @user do |f|
+  = render 'shared/error_messages'
+
   = f.label :name
   = f.text_field :name
 
@@ -8,9 +10,9 @@ h1 Signup
   = f.text_field :email
 
   = f.label :password
-  = f.text_field :password
+  = f.password_field :password
 
   = f.label :password_confirmation
-  = f.text_field :password_confirmation
+  = f.password_field :password_confirmation
 
   = f.submit "Create my account"
