@@ -1,4 +1,6 @@
 - provide(:title, 'Sign up')
+= render 'layouts/header'
+
 h1 Signup
 = form_for @user do |f|
   = render 'shared/error_messages'
