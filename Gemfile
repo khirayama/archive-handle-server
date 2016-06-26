@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 gem 'bcrypt'
 gem 'faker', '1.4.2'
+gem 'will_paginate', '3.0.7'
 
 gem 'sqlite3'
 
