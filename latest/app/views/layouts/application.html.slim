@@ -10,6 +10,8 @@ body
     = link_to 'top', root_path
   p
     = link_to 'login with twitter', '/auth/twitter'
+  p
+    = link_to 'logout', logout_path
   - if flash[:notice]
     = flash[:notice]
   = yield
