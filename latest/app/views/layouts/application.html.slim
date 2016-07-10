@@ -6,4 +6,8 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 body
+  p
+    = link_to 'top', root_path
+  p
+    = link_to 'login with twitter', '/auth/twitter'
   = yield
