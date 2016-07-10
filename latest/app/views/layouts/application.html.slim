@@ -16,4 +16,6 @@ body
     = link_to 'logout', logout_path
   - if flash[:notice]
     = flash[:notice]
+  - if flash[:alert]
+    = flash[:alert]
   = yield
