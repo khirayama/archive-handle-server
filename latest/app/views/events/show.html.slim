@@ -6,5 +6,5 @@ p
 - if @event.created_by?(current_user)
   p
     = link_to 'Edit event', edit_event_path(@event)
-
-
+  p
+    = link_to 'Delete event', event_path(@event), method: :delete, data: { confirm: 'Is it ok?' }
