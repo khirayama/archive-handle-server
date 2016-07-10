@@ -1,0 +1,25 @@
+- now = Time.zone.now
+
+h1 update event
+
+= form_for(@event) do |f|
+  - if @event.errors.any?
+    - @event.errors.full_messages.each do |msg|
+      = msg
+
+  p
+    = f.label :name
+    = f.text_field :name
+  p
+    = f.label :place
+    = f.text_field :place
+  p
+    = f.label :start_time
+    = f.datetime_select :start_time, start_year: now.year, end_year: now.year + 1
+  p
+    = f.label :end_time
+    = f.datetime_select :end_time, start_year: now.year, end_year: now.year + 1
+  p
+    = f.label :content
+    = f.text_area :content
+  = f.submit 'update', data: { disable_with: 'updating...' }
